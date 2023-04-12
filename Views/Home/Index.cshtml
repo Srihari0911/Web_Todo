@@ -1,5 +1,5 @@
 @model TodoViewModel
-
+<center><p>
 <form asp-action="Insert" id="form_action" method="post" role="form">
     <div asp-validation-summary="All"></div>
         <label asp-for="Todo.Name"></label>
@@ -7,13 +7,14 @@
         <input asp-for="Todo.Name" />
         <span asp-validation-for="Todo.Name"></span>
         <input type="submit" id="form-button" value="Add Todo" />
-</form>
-
+</form></center></p>
+<p>
+<<div id="firstTable"><center>
 <table>
     <thead>
         <tr class="table-primary">
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
+            <th style="width:30%" scope="col">Id</th><br>
+            <th style="width:50%" scope="col">Name</th>
         </tr>
     </thead>
     <tbody>
@@ -30,5 +31,8 @@
 }
 </tbody>
 </table>
+</div>
+</center>
+</p>
 </div>
 </div>
